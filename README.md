@@ -10,6 +10,7 @@ This is accomplished in several stages.
     ** The needed trajectories for this notebook must be downloaded separately since the required files are larger
        than the github limit and are difficult to break into pieces.
 2) √ leaflet_Identification.ipynb: Determines which lipids residues belongs to each leaflet using DBSCAN
+  * Check and fix frames for which DBSCAN performs poorly using simple automated anomoly detection
 3) (To be added) grid_height_interpolation: Interpolates lipid headgroup heights to a 2D using the scheme found in  equation (S1) of 
   'Doktorova, Milka, et al. "Gramicidin increases lipid flip-flop in symmetric and asymmetric lipid vesicles." 
    Biophysical journal 116.5 (2019): 860-873.'
