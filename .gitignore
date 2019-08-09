@@ -1,0 +1,7 @@
+#trajectory data files
+*.dcd
+*.parm7
+*.psf
+
+#compiled python libraries
+*.pyc

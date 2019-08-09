@@ -1,0 +1,24 @@
+# 08/08/19 13:48:13
+# topology.nochamber.parm7
+# Loaded topologies:
+#   topology.nochamber.parm7
+trajin fullTraj.dcd
+strip !:1-4254,POPC
+molinfo :1-4254
+autoimage anchor :824-1418 fixed :1-823,1419-4554 origin
+help autoimage
+autoimage anchor :1-4254 fixed :POPC
+trajout memb_prot.dcd
+go
+quit
+# 08/08/19 13:53:42
+# topology.nochamber.parm7
+# Loaded topologies:
+#   topology.nochamber.parm7
+parmstrip !:1-4254,POPC
+parmwrite out topology.memb_prot.nochamber.parm7 nochamber
+parmwrite out topology.memb_prot.psf
+trajin memb_prot.dcd
+rmsd :1-4254@CA out memb_prot.rmsd.prot_CA.dat
+go
+quit

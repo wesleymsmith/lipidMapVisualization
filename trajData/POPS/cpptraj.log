@@ -1,0 +1,24 @@
+# 08/08/19 13:40:12
+# pro_lig.parm7
+# Loaded topologies:
+#   pro_lig.parm7
+molinfo
+strip !:1-4254,POPC,POPS
+trajin fullTraj.dcd
+molinfo :1-4254
+autoimage anchor :824-1418 fixed :1-823,1419-4254 origin
+autoimage anchor :1-4254 fixed :POPC,POPS
+trajout memb_prot.dcd
+go
+quit
+# 08/08/19 13:44:41
+# pro_lig.parm7
+# Loaded topologies:
+#   pro_lig.parm7
+parmstrip !:1-4254,POPC,POPS
+parmwrite out topology.memb_prot.nochamber.parm7 nochamber
+parmwrite out topology.memb_prot.psf
+trajin memb_prot.dcd
+rmsd :1-4254@CA out memb_prot.rmsd.prot_CA.dat
+go
+quit

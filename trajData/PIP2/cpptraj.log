@@ -1,0 +1,72 @@
+# 08/08/19 12:48:37
+# pro_lig.parm7
+# Loaded topologies:
+#   pro_lig.parm7
+help
+molinfo
+help
+help molinof !:WAT,TIP3,CLA,POT,SAPI,POPC
+help molinfo !:WAT,TIP3,CLA,POT,SAPI,POPC
+molinfo !:WAT,TIP3,CLA,POT,SAPI,POPC
+strip !:1-4254,POPC,SAPI
+autoimage anchor :824-:1418 fixed :1-823,1419-4254 origin
+autoimage anchor :1-4254 fixed :POPC,SAPI
+trajout memb_prot.dcd
+go
+ls
+trajin fullTraj.dcd
+strip !:1-4254,POPC,SAPI
+autoimage anchor :824-:1418 fixed :1-823,1419-4254 origin
+autoimage anchor :1-4254 fixed :POPC,SAPI
+trajout memb_prot.dcd
+quit
+quit
+# 08/08/19 13:02:36
+# pro_lig.parm7
+# Loaded topologies:
+#   pro_lig.parm7
+trajin fullTraj.dcd
+strip !:1-4254,POPC,SAPI
+autoimage anchor :824-:1418 fixed :1-823,1419-4254 origin
+autoimage anchor :1-4254 fixed :POPC,SAPI
+trajout memb_prot.dcd
+go
+quit
+# 08/08/19 13:12:47
+# pro_lig.parm7
+# Loaded topologies:
+#   pro_lig.parm7
+parmstrip !:1-4254,POPC,SAPI
+parmwrite out topology.memb_prot.nochamber.parm7 nochamber
+go
+trajin memb_prot.dcd 1 1 1
+trajout memb_prot.frame_0000.pdb
+go
+quit
+# 08/08/19 13:14:42
+# memb_prot.frame_0000.pdb
+# Loaded topologies:
+#   memb_prot.frame_0000.pdb
+quit
+# 08/08/19 13:16:20
+# topology.memb_prot.nochamber.parm7
+# Loaded topologies:
+#   topology.memb_prot.nochamber.parm7
+trajin memb_prot.dcd
+rmsd :1-4254@CA out memb_prot.rmsd.prot_CA.dat
+go
+quit
+# 08/08/19 13:20:24
+# memb_prot.frame_0000.pdb
+# Loaded topologies:
+#   memb_prot.frame_0000.pdb
+molinfo !:POPC,SAPI
+molinfo
+quit
+# 08/08/19 13:33:08
+# topology.memb_prot.nochamber.parm7
+# Loaded topologies:
+#   topology.memb_prot.nochamber.parm7
+parmwrite topology.memb_prot.psf
+parmwrite out topology.memb_prot.psf
+quit
